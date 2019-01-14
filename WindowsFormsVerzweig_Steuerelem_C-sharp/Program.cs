@@ -11,12 +11,13 @@ namespace WindowsFormsVerzweig_Steuerelem_C_sharp
 		/// <summary>
 		/// Der Haupteinstiegspunkt für die Anwendung.
 		/// </summary>
+		internal static int selector = 0;
 		[STAThread]
 		static void Main()
 		{
 			Application.EnableVisualStyles();
 			Application.SetCompatibleTextRenderingDefault(false);
-			Application.Run(new Form1());
+			Application.Run(new Init());
 		}
 	}
 }
