@@ -33,6 +33,7 @@
 			this.LBL_PCAF = new System.Windows.Forms.Label();
 			this.panel1 = new System.Windows.Forms.Panel();
 			this.LLBL_Future = new System.Windows.Forms.LinkLabel();
+			this.LL_RGBshift = new System.Windows.Forms.LinkLabel();
 			this.panel1.SuspendLayout();
 			this.SuspendLayout();
 			// 
@@ -74,6 +75,7 @@
 			// 
 			// panel1
 			// 
+			this.panel1.Controls.Add(this.LL_RGBshift);
 			this.panel1.Controls.Add(this.LLBL_Future);
 			this.panel1.Controls.Add(this.LBL_PCAF);
 			this.panel1.Controls.Add(this.LLBL_Options);
@@ -96,6 +98,19 @@
 			this.LLBL_Future.Text = "Multiple-form";
 			this.LLBL_Future.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LLBL_Future_LinkClicked);
 			// 
+			// LL_RGBshift
+			// 
+			this.LL_RGBshift.AutoSize = true;
+			this.LL_RGBshift.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.LL_RGBshift.LinkColor = System.Drawing.SystemColors.HotTrack;
+			this.LL_RGBshift.Location = new System.Drawing.Point(17, 217);
+			this.LL_RGBshift.Name = "LL_RGBshift";
+			this.LL_RGBshift.Size = new System.Drawing.Size(220, 32);
+			this.LL_RGBshift.TabIndex = 4;
+			this.LL_RGBshift.TabStop = true;
+			this.LL_RGBshift.Text = "RGB Shift-form";
+			this.LL_RGBshift.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LLBL_RGBshiftClicked);
+			// 
 			// Init
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -117,5 +132,6 @@
 		private System.Windows.Forms.Label LBL_PCAF;
 		private System.Windows.Forms.Panel panel1;
 		private System.Windows.Forms.LinkLabel LLBL_Future;
+		private System.Windows.Forms.LinkLabel LL_RGBshift;
 	}
 }

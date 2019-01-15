@@ -45,5 +45,14 @@ namespace WindowsFormsVerzweig_Steuerelem_C_sharp
 			this.Hide();
 			mBox.Show();
 		}
+
+		private void LLBL_RGBshiftClicked(object sender, LinkLabelLinkClickedEventArgs e)
+		{
+			Form rBox = new RGBshift();
+			InitializeComponent();
+			rBox.Owner = this;
+			this.Hide();
+			rBox.Show();
+		}
 	}
 }
