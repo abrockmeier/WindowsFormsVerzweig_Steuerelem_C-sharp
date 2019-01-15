@@ -57,21 +57,6 @@ namespace WindowsFormsVerzweig_Steuerelem_C_sharp
 			ShowColor();
 		}
 
-		private void LBL_red_Click(object sender, EventArgs e)
-		{
-			//
-		}
-
-		private void LBL_green_Click(object sender, EventArgs e)
-		{
-			//
-		}
-
-		private void LBL_blue_Click(object sender, EventArgs e)
-		{
-			//
-		}
-
 		private void P_canvas_BackgroundImageChanged(object sender, EventArgs e)
 		{
 			 // hier besser nicht rein --- Schleife!?

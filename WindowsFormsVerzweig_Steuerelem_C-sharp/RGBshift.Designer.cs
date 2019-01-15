@@ -56,7 +56,6 @@
 			this.LBL_red.Size = new System.Drawing.Size(30, 17);
 			this.LBL_red.TabIndex = 1;
 			this.LBL_red.Text = "Rot";
-			this.LBL_red.Click += new System.EventHandler(this.LBL_red_Click);
 			// 
 			// LBL_green
 			// 
@@ -66,7 +65,6 @@
 			this.LBL_green.Size = new System.Drawing.Size(40, 17);
 			this.LBL_green.TabIndex = 2;
 			this.LBL_green.Text = "Grün";
-			this.LBL_green.Click += new System.EventHandler(this.LBL_green_Click);
 			// 
 			// LBL_blue
 			// 
@@ -76,7 +74,6 @@
 			this.LBL_blue.Size = new System.Drawing.Size(36, 17);
 			this.LBL_blue.TabIndex = 3;
 			this.LBL_blue.Text = "Blau";
-			this.LBL_blue.Click += new System.EventHandler(this.LBL_blue_Click);
 			// 
 			// TB_red
 			// 

@@ -22,6 +22,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -78,6 +79,12 @@
     <Compile Include="RGBshift.Designer.cs">
       <DependentUpon>RGBshift.cs</DependentUpon>
     </Compile>
+    <Compile Include="Tax.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tax.Designer.cs">
+      <DependentUpon>Tax.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="CheckBox.resx">
       <DependentUpon>CheckBox.cs</DependentUpon>
     </EmbeddedResource>
@@ -101,6 +108,9 @@
     </Compile>
     <EmbeddedResource Include="RGBshift.resx">
       <DependentUpon>RGBshift.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tax.resx">
+      <DependentUpon>Tax.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
