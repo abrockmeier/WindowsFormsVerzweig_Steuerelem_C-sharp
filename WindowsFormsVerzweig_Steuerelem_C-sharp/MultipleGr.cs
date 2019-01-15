@@ -29,6 +29,11 @@ namespace WindowsFormsVerzweig_Steuerelem_C_sharp
 			else
 				OutBillet = "Hotel";
 			
+			Anzeigen();
+		}
+
+		private void Anzeigen()
+		{
 			LBLCity_Billet.Text = OutCity + ", " + OutBillet;
 		}
 
@@ -40,8 +45,8 @@ namespace WindowsFormsVerzweig_Steuerelem_C_sharp
 				OutCity = "Paris";
 			else
 				OutCity = "Rom";
-
-			LBLCity_Billet.Text = OutCity + ", " + OutBillet;
+			
+			Anzeigen();
 		}
 
 		private void MultipleGr_FormClosing(object sender, FormClosingEventArgs e)
