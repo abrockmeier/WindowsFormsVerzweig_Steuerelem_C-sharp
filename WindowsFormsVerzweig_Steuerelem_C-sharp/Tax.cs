@@ -17,18 +17,19 @@ namespace WindowsFormsVerzweig_Steuerelem_C_sharp
 			InitializeComponent();
 			TB_salary.Text = "0";
 		}
+		//Vars und methoden in extra klasse, beim laden er form objet erstellen und mit mit der objektinstanz zugreifen..
 		private int taxAmount, validNum; 
 		private bool salaryValid = true;
 
 		public int TaxAmount
 		{
 			get { return taxAmount; }
-			set { taxAmount = TaxAmount; }
+			set { taxAmount = value; }
 		}
 		public bool SalaryValid // Not necessary
 		{ 
 			get { return salaryValid; }
-			set { salaryValid = SalaryValid; } 
+			set { salaryValid = value; } 
 		}
 
 		private void BT_calc_Click(object sender, EventArgs e)
@@ -36,8 +37,8 @@ namespace WindowsFormsVerzweig_Steuerelem_C_sharp
 			ValidateSalary();
 			if (SalaryValid)
 			{
-				CalcTax(sender,e);
-				LBL_tax.Text = "tax amount: " + this.TaxAmount; // "this." is necessary.. why! 
+				CalcTax();
+				LBL_tax.Text = "tax amount: " + TaxAmount; // "this." is necessary.. why! 
 				
 			}
 		}
@@ -77,11 +78,11 @@ namespace WindowsFormsVerzweig_Steuerelem_C_sharp
 			else SalaryValid = true;
 		}
 
-		private void CalcTax(object sender, EventArgs e)
+		private void CalcTax()
 		{
-			taxAmount = validNum * 12 / 100; 
+			//taxAmount = validNum * 12 / 100; 
 			// Frage @herr hübsch: warum funktioniert hier der Setter nicht?
-			// TaxAmount = validNum * 12 / 100;
+			TaxAmount = validNum * 12 / 100;
 		}
 
 		private void Tax_Load(object sender, EventArgs e)
