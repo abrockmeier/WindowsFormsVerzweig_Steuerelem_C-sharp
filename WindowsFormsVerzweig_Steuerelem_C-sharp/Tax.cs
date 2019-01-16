@@ -16,31 +16,42 @@ namespace WindowsFormsVerzweig_Steuerelem_C_sharp
 		{
 			InitializeComponent();
 			TB_salary.Text = "0";
+			TaxSupport taxSupport_inst = new TaxSupport();
 		}
-		//Vars und methoden in extra klasse, beim laden er form objet erstellen und mit mit der objektinstanz zugreifen..
-		private int taxAmount, validNum; 
-		private bool salaryValid = true;
+		//	Vars und methoden in extra klasse, beim laden der form objekt 
+		//	erstellen und mit mit der objektinstanz zugreifen..
+		
+		//private int taxAmount, validNum; 
+		//private bool salaryValid = true;
 
-		public int TaxAmount
-		{
-			get { return taxAmount; }
-			set { taxAmount = value; }
-		}
-		public bool SalaryValid // Not necessary
-		{ 
-			get { return salaryValid; }
-			set { salaryValid = value; } 
-		}
+		//public int TaxAmount
+		//{
+		//	get { return taxAmount; }
+		//	set { taxAmount = value; }
+		//}
+		//public bool SalaryValid // Not necessary
+		//{ 
+		//	get { return salaryValid; }
+		//	set { salaryValid = value; } 
+		//}
 
-		private void BT_calc_Click(object sender, EventArgs e)
-		{
-			ValidateSalary();
-			if (SalaryValid)
+		private void BT_calc_Click(object sender,EventArgs e)
+		{	
+			//	Aufruf der Methode in Tax-Support---?
+			;
+			if (TaxSupport.ValidateSalary())
 			{
 				CalcTax();
 				LBL_tax.Text = "tax amount: " + TaxAmount; // "this." is necessary.. why! 
-				
 			}
+		}
+
+
+		private void TB_salary_Validating(object sender,EventArgs e)
+		{
+			if (int.TryParse(TB_salary.Text, out validNum))
+			ValidateSalary();
+			else ErrorBox();
 		}
 
 		private void Tax_FormClosing(object sender, FormClosingEventArgs e)
@@ -49,40 +60,11 @@ namespace WindowsFormsVerzweig_Steuerelem_C_sharp
 			this.Hide();
 		}
 
-		private void TB_salary_Validating(object sender, CancelEventArgs e)
-		{
-			if (int.TryParse(TB_salary.Text, out validNum))
-			ValidateSalary();
-			else ErrorBox();
-		}
-
-		private void ErrorBox()
-		{
-			SalaryValid = false;
-			TB_salary.Text = "0";
-			string message = "Please enter a valid number (-1 < X < 2147483646)  !";
-			string caption	= "Error Detected in Input";
-			DialogResult error;
-			error = MessageBox.Show(message, caption);
-		}
 		
-		internal void ValidateSalary()
-		{	
-			
-			if ((Convert.ToInt32(TB_salary.Text) > 2147483647) ||
-				(Convert.ToInt32(TB_salary.Text) < 0))
-			{
-				SalaryValid = false;
-				ErrorBox();
-			}
-			else SalaryValid = true;
-		}
 
 		private void CalcTax()
 		{
-			//taxAmount = validNum * 12 / 100; 
-			// Frage @herr hübsch: warum funktioniert hier der Setter nicht?
-			TaxAmount = validNum * 12 / 100;
+			TaxSupport.TaxAmount = validNum * 12 / 100;
 		}
 
 		private void Tax_Load(object sender, EventArgs e)

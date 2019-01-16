@@ -85,6 +85,9 @@
     <Compile Include="Tax.Designer.cs">
       <DependentUpon>Tax.cs</DependentUpon>
     </Compile>
+    <Compile Include="TaxSupport.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <EmbeddedResource Include="CheckBox.resx">
       <DependentUpon>CheckBox.cs</DependentUpon>
     </EmbeddedResource>
