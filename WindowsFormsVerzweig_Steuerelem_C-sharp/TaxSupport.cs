@@ -6,18 +6,24 @@ using System.Threading.Tasks;
 
 namespace WindowsFormsVerzweig_Steuerelem_C_sharp
 {
-	class TaxSupport : Tax
+	class TaxSupport
 	{
-		private int taxAmount, validNum; 
+		private int taxAmount, iSalary; 
 		private bool salaryValid = true;
-		private string salary;
+		private string salary, salary_SV;
+		private int factor;
 
+		public int Factor
+		{
+			get { return factor; }
+			set { factor = value; }
+		}
 		public int TaxAmount
 		{
 			get { return taxAmount; }
 			set { taxAmount = value; }
 		}
-		public bool SalaryValid // Not necessary
+		public bool SalaryValid 
 		{ 
 			get { return salaryValid; }
 			set { salaryValid = value; } 
@@ -27,65 +33,39 @@ namespace WindowsFormsVerzweig_Steuerelem_C_sharp
 			get { return salary; }
 			set { salary = value; }
 		}
-
-
-		private string[,] ErrorBox()
-		{
-			SalaryValid = false;
-			Salary = "0";
-			string[,] errorArray = new string[3,2];
-			string message = "Please enter a valid number (-1 < X < 2147483646)  !";
-			string caption	= "Error Detected in Input";
-			errorArray[0,0] = "message";
-			errorArray[1,0] = "caption";
-			errorArray[2,0] = "salary";
-			errorArray[0,1] = message;
-			errorArray[1,1] = caption;
-			errorArray[2,1] = salary;
-			//DialogResult error;
-			return errorArray;
+		public string Salary_SV
+		{ 
+			get { return salary_SV; }
+			set { salary_SV = value; }
 		}
 
-		internal static bool ValidateSalary()
+		internal string ValidateSalary()
 		{	
-			
-			if ((Convert.ToInt32(TB_salary.Text) > 2147483647) ||
-				(Convert.ToInt32(TB_salary.Text) < 0))
+			if (int.TryParse(Salary, out iSalary))
 			{
-				return = false;
-				ErrorBox();
+				if(iSalary < 0)
+				Salary = Convert.ToString(iSalary);
+				return Salary;
 			}
-			else return = true;
+			else return "please enter a pos. number < 2.147.483.647!";
 		}
 
-		private void CalcTax()
+		internal void CalcTax()
 		{
-			TaxAmount = validNum * 12 / 100;
+			TaxAmount =  Convert.ToInt32(Salary) / 100 * Factor;
 		}
 
-
+		internal int TaxFactor()
+		{
+			if (iSalary >= 0)
+				Factor = 12;
+			if (iSalary > 12000)
+				Factor = 15;
+			if (iSalary > 20000)
+				Factor = 20;
+			if (iSalary > 30000)
+				Factor = 25;
+			return Factor;
+		}
 	}
 }
-
-
-//private void ErrorBox()
-		//{
-		//	SalaryValid = false;
-		//	TB_salary.Text = "0";
-		//	string message = "Please enter a valid number (-1 < X < 2147483646)  !";
-		//	string caption	= "Error Detected in Input";
-		//	DialogResult error;
-		//	error = MessageBox.Show(message, caption);
-		//}
-		
-		//internal void ValidateSalary()
-		//{	
-			
-		//	if ((Convert.ToInt32(TB_salary.Text) > 2147483647) ||
-		//		(Convert.ToInt32(TB_salary.Text) < 0))
-		//	{
-		//		SalaryValid = false;
-		//		ErrorBox();
-		//	}
-		//	else SalaryValid = true;
-		//}

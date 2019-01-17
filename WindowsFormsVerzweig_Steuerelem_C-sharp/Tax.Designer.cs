@@ -32,14 +32,16 @@
 			this.LBL_salary = new System.Windows.Forms.Label();
 			this.TB_salary = new System.Windows.Forms.TextBox();
 			this.LBL_tax = new System.Windows.Forms.Label();
+			this.LBL_TaxF = new System.Windows.Forms.Label();
 			this.SuspendLayout();
 			// 
 			// BT_calc
 			// 
 			this.BT_calc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.BT_calc.Location = new System.Drawing.Point(88, 160);
+			this.BT_calc.Location = new System.Drawing.Point(117, 197);
+			this.BT_calc.Margin = new System.Windows.Forms.Padding(4);
 			this.BT_calc.Name = "BT_calc";
-			this.BT_calc.Size = new System.Drawing.Size(95, 33);
+			this.BT_calc.Size = new System.Drawing.Size(127, 41);
 			this.BT_calc.TabIndex = 0;
 			this.BT_calc.Text = "calculate";
 			this.BT_calc.UseVisualStyleBackColor = true;
@@ -49,41 +51,56 @@
 			// 
 			this.LBL_salary.AutoSize = true;
 			this.LBL_salary.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.LBL_salary.Location = new System.Drawing.Point(85, 62);
+			this.LBL_salary.Location = new System.Drawing.Point(113, 76);
+			this.LBL_salary.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
 			this.LBL_salary.Name = "LBL_salary";
-			this.LBL_salary.Size = new System.Drawing.Size(48, 16);
+			this.LBL_salary.Size = new System.Drawing.Size(59, 20);
 			this.LBL_salary.TabIndex = 1;
 			this.LBL_salary.Text = "salary:";
 			// 
 			// TB_salary
 			// 
 			this.TB_salary.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.TB_salary.Location = new System.Drawing.Point(88, 81);
+			this.TB_salary.Location = new System.Drawing.Point(117, 100);
+			this.TB_salary.Margin = new System.Windows.Forms.Padding(4);
 			this.TB_salary.Name = "TB_salary";
-			this.TB_salary.Size = new System.Drawing.Size(100, 22);
+			this.TB_salary.Size = new System.Drawing.Size(375, 26);
 			this.TB_salary.TabIndex = 0;
-			this.TB_salary.Validating += new System.ComponentModel.CancelEventHandler(this.TB_salary_Validating);
 			// 
 			// LBL_tax
 			// 
 			this.LBL_tax.AutoSize = true;
 			this.LBL_tax.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.LBL_tax.Location = new System.Drawing.Point(288, 78);
+			this.LBL_tax.Location = new System.Drawing.Point(339, 202);
+			this.LBL_tax.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
 			this.LBL_tax.Name = "LBL_tax";
-			this.LBL_tax.Size = new System.Drawing.Size(122, 24);
+			this.LBL_tax.Size = new System.Drawing.Size(153, 29);
 			this.LBL_tax.TabIndex = 3;
 			this.LBL_tax.Text = "tax amount: 0";
+			// 
+			// LBL_TaxF
+			// 
+			this.LBL_TaxF.AutoSize = true;
+			this.LBL_TaxF.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.LBL_TaxF.Location = new System.Drawing.Point(532, 96);
+			this.LBL_TaxF.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+			this.LBL_TaxF.Name = "LBL_TaxF";
+			this.LBL_TaxF.Size = new System.Drawing.Size(168, 29);
+			this.LBL_TaxF.TabIndex = 4;
+			this.LBL_TaxF.Text = "tax factor: 12%";
 			// 
 			// Tax
 			// 
 			this.AcceptButton = this.BT_calc;
-			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(600, 250);
+			this.ClientSize = new System.Drawing.Size(800, 308);
+			this.Controls.Add(this.LBL_TaxF);
 			this.Controls.Add(this.LBL_tax);
 			this.Controls.Add(this.TB_salary);
 			this.Controls.Add(this.LBL_salary);
 			this.Controls.Add(this.BT_calc);
+			this.Margin = new System.Windows.Forms.Padding(4);
 			this.Name = "Tax";
 			this.Text = "Tax";
 			this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Tax_FormClosing);
@@ -99,5 +116,6 @@
 		private System.Windows.Forms.Label LBL_salary;
 		private System.Windows.Forms.TextBox TB_salary;
 		private System.Windows.Forms.Label LBL_tax;
+		private System.Windows.Forms.Label LBL_TaxF;
 	}
 }
