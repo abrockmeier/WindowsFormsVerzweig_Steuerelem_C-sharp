@@ -22,5 +22,10 @@ namespace WindowsFormsVerzweig_Steuerelem_C_sharp
 			this.Owner.Show();
 			this.Hide();
 		}
+
+		private void Strings_Load(object sender, EventArgs e)
+		{
+			Select();
+		}
 	}
 }
