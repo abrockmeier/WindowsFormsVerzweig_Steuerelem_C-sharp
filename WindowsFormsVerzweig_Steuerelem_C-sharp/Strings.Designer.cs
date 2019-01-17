@@ -70,6 +70,7 @@
 			this.BT_length.TabIndex = 1;
 			this.BT_length.Text = "Length";
 			this.BT_length.UseVisualStyleBackColor = true;
+			this.BT_length.Click += new System.EventHandler(this.BT_length_Click);
 			// 
 			// BT_chars
 			// 

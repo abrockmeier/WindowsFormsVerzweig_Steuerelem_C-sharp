@@ -39,7 +39,7 @@ namespace WindowsFormsVerzweig_Steuerelem_C_sharp
 			set { salary_SV = value; }
 		}
 
-		internal string ValidateSalary()
+		public string ValidateSalary()
 		{	
 			if (int.TryParse(Salary, out iSalary))
 			{
@@ -50,12 +50,12 @@ namespace WindowsFormsVerzweig_Steuerelem_C_sharp
 			else return "please enter a pos. number < 2.147.483.647!";
 		}
 
-		internal void CalcTax()
+		public void CalcTax()
 		{
 			TaxAmount =  Convert.ToInt32(Salary) / 100 * Factor;
 		}
 
-		internal int TaxFactor()
+		public int TaxFactor()
 		{
 			if (iSalary >= 0)
 				Factor = 12;

@@ -17,10 +17,8 @@ namespace WindowsFormsVerzweig_Steuerelem_C_sharp
 			InitializeComponent();
 			TB_salary.Text = "0";
 		}
-		TaxSupport taxSupport_inst = new TaxSupport();
 
-		//	Vars und methoden in extra klasse, beim laden der form objekt 
-		//	erstellen und mit mit der objektinstanz zugreifen..
+		TaxSupport taxSupport_inst = new TaxSupport();
 
 		private void BT_calc_Click(object sender,EventArgs e)
 		{	

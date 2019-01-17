@@ -79,6 +79,13 @@
     <Compile Include="RGBshift.Designer.cs">
       <DependentUpon>RGBshift.cs</DependentUpon>
     </Compile>
+    <Compile Include="Strings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Strings.Designer.cs">
+      <DependentUpon>Strings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StringsSupport.cs" />
     <Compile Include="Tax.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -111,6 +118,9 @@
     </Compile>
     <EmbeddedResource Include="RGBshift.resx">
       <DependentUpon>RGBshift.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Strings.resx">
+      <DependentUpon>Strings.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Tax.resx">
       <DependentUpon>Tax.cs</DependentUpon>
