@@ -63,5 +63,14 @@ namespace WindowsFormsVerzweig_Steuerelem_C_sharp
 			this.Hide();
 			tBox.Show();
 		}
+
+		private void LL_strings_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+		{
+			Form sBox = new Strings();
+			InitializeComponent();
+			sBox.Owner = this;
+			this.Hide();
+			sBox.Show();
+		}
 	}
 }
