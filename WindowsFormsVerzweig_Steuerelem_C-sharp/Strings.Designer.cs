@@ -81,6 +81,7 @@
 			this.BT_chars.TabIndex = 2;
 			this.BT_chars.Text = "Chars";
 			this.BT_chars.UseVisualStyleBackColor = true;
+			this.BT_chars.Click += new System.EventHandler(this.BT_chars_Click);
 			// 
 			// BT_trim
 			// 

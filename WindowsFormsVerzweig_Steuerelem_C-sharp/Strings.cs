@@ -36,5 +36,10 @@ namespace WindowsFormsVerzweig_Steuerelem_C_sharp
 			stringSupport_inst.String_length();
 			LBL_output.Text = "label:" +System.Environment.NewLine + stringSupport_inst.Output;
 		}
+
+		private void BT_chars_Click(object sender, EventArgs e)
+		{
+			
+		}
 	}
 }
