@@ -32,14 +32,29 @@ namespace WindowsFormsVerzweig_Steuerelem_C_sharp
 
 		private void BT_length_Click(object sender, EventArgs e)
 		{
+			LBL_output2.Text ="";
 			stringSupport_inst.Input = TB_input.Text;
 			stringSupport_inst.String_length();
-			LBL_output.Text = "label:" +System.Environment.NewLine + stringSupport_inst.Output;
+			LBL_output.Text = "lenght:" + System.Environment.NewLine
+			+ stringSupport_inst.Output;
+			stringSupport_inst.Output = "";
+
 		}
 
 		private void BT_chars_Click(object sender, EventArgs e)
 		{
-			
+			stringSupport_inst.Input = TB_input.Text;
+			stringSupport_inst.Length = stringSupport_inst.Input.Length;
+			stringSupport_inst.OddOrEven();
+			stringSupport_inst.String_toChar();
+			//LBL_output.Text = "";
+			LBL_output.Text = stringSupport_inst.Output;
+			LBL_output2.Text = stringSupport_inst.Output2;
+			LBL_output3.Text = stringSupport_inst.Output3;
+			stringSupport_inst.Output = "";
+			stringSupport_inst.Output2 = "";
+			stringSupport_inst.Output3 = "";
+
 		}
 	}
 }
