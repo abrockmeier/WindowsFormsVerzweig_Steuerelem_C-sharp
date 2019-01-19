@@ -54,7 +54,7 @@ namespace WindowsFormsVerzweig_Steuerelem_C_sharp
 			string zeile;
 			if (!File.Exists(filename))
 			{
-				MessageBox.Show("Datei" + filename + "existiert nicht");
+				MessageBox.Show("Datei " + filename + " existiert nicht");
 				return;
 			}
 			fs_E = new FileStream(filename, FileMode.Open);
