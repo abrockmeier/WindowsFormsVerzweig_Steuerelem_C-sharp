@@ -12,8 +12,6 @@ namespace WindowsFormsVerzweig_Steuerelem_C_sharp
 {
 	public partial class Init : Form
 	{
-		
-
 		public Init()
 		{
 			InitializeComponent();
@@ -71,6 +69,24 @@ namespace WindowsFormsVerzweig_Steuerelem_C_sharp
 			sBox.Owner = this;
 			this.Hide();
 			sBox.Show();
+		}
+
+		private void LBL_DateTimes_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+		{
+			Form dBox = new DateTimes();
+			InitializeComponent();
+			dBox.Owner = this;
+			this.Hide();
+			dBox.Show();
+		}
+
+		private void LLB_fileIO_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+		{
+			Form fBox = new Files();
+			InitializeComponent();
+			fBox.Owner = this;
+			this.Hide();
+			fBox.Show();
 		}
 	}
 }

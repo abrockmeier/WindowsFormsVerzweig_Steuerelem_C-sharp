@@ -53,6 +53,18 @@
     <Compile Include="CheckBox.Designer.cs">
       <DependentUpon>CheckBox.cs</DependentUpon>
     </Compile>
+    <Compile Include="DateTimes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DateTimes.Designer.cs">
+      <DependentUpon>DateTimes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="files.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="files.Designer.cs">
+      <DependentUpon>files.cs</DependentUpon>
+    </Compile>
     <Compile Include="MultipleGr.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -92,11 +104,15 @@
     <Compile Include="Tax.Designer.cs">
       <DependentUpon>Tax.cs</DependentUpon>
     </Compile>
-    <Compile Include="TaxSupport.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="TaxSupport.cs" />
     <EmbeddedResource Include="CheckBox.resx">
       <DependentUpon>CheckBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DateTimes.resx">
+      <DependentUpon>DateTimes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="files.resx">
+      <DependentUpon>files.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Init.resx">
       <DependentUpon>Init.cs</DependentUpon>
