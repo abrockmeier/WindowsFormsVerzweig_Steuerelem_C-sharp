@@ -89,6 +89,15 @@ namespace WindowsFormsVerzweig_Steuerelem_C_sharp
 			MessageBox.Show(ex.Message);
 			}
 			}
+
+		private void BT_Path_Click(object sender, EventArgs e)
+		{
+			Form pBox = new paths();
+			InitializeComponent();
+			pBox.Owner = this;
+			this.Hide();
+			pBox.Show();
 		}
+	}
 	}
 

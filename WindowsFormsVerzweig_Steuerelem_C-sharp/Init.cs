@@ -88,5 +88,6 @@ namespace WindowsFormsVerzweig_Steuerelem_C_sharp
 			this.Hide();
 			fBox.Show();
 		}
+
 	}
 }

@@ -35,6 +35,8 @@
 			this.BT_exception = new System.Windows.Forms.Button();
 			this.BT_Path = new System.Windows.Forms.Button();
 			this.BT_fileExists = new System.Windows.Forms.Button();
+			this.LBL_secWrite = new System.Windows.Forms.Label();
+			this.LBL_secRead = new System.Windows.Forms.Label();
 			this.SuspendLayout();
 			// 
 			// BT_read
@@ -80,7 +82,7 @@
 			// BT_exception
 			// 
 			this.BT_exception.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.BT_exception.Location = new System.Drawing.Point(565, 147);
+			this.BT_exception.Location = new System.Drawing.Point(589, 147);
 			this.BT_exception.Name = "BT_exception";
 			this.BT_exception.Size = new System.Drawing.Size(162, 39);
 			this.BT_exception.TabIndex = 4;
@@ -91,17 +93,18 @@
 			// BT_Path
 			// 
 			this.BT_Path.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.BT_Path.Location = new System.Drawing.Point(565, 202);
+			this.BT_Path.Location = new System.Drawing.Point(589, 202);
 			this.BT_Path.Name = "BT_Path";
 			this.BT_Path.Size = new System.Drawing.Size(162, 39);
 			this.BT_Path.TabIndex = 5;
 			this.BT_Path.Text = "path";
 			this.BT_Path.UseVisualStyleBackColor = true;
+			this.BT_Path.Click += new System.EventHandler(this.BT_Path_Click);
 			// 
 			// BT_fileExists
 			// 
 			this.BT_fileExists.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.BT_fileExists.Location = new System.Drawing.Point(565, 90);
+			this.BT_fileExists.Location = new System.Drawing.Point(589, 90);
 			this.BT_fileExists.Name = "BT_fileExists";
 			this.BT_fileExists.Size = new System.Drawing.Size(162, 39);
 			this.BT_fileExists.TabIndex = 6;
@@ -109,11 +112,33 @@
 			this.BT_fileExists.UseVisualStyleBackColor = true;
 			this.BT_fileExists.Click += new System.EventHandler(this.BT_fileExists_Click);
 			// 
+			// LBL_secWrite
+			// 
+			this.LBL_secWrite.AutoSize = true;
+			this.LBL_secWrite.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.LBL_secWrite.Location = new System.Drawing.Point(456, 147);
+			this.LBL_secWrite.Name = "LBL_secWrite";
+			this.LBL_secWrite.Size = new System.Drawing.Size(106, 20);
+			this.LBL_secWrite.TabIndex = 7;
+			this.LBL_secWrite.Text = "secure write:";
+			// 
+			// LBL_secRead
+			// 
+			this.LBL_secRead.AutoSize = true;
+			this.LBL_secRead.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.LBL_secRead.Location = new System.Drawing.Point(456, 90);
+			this.LBL_secRead.Name = "LBL_secRead";
+			this.LBL_secRead.Size = new System.Drawing.Size(103, 20);
+			this.LBL_secRead.TabIndex = 8;
+			this.LBL_secRead.Text = "secure read:";
+			// 
 			// Files
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(800, 450);
+			this.Controls.Add(this.LBL_secRead);
+			this.Controls.Add(this.LBL_secWrite);
 			this.Controls.Add(this.BT_fileExists);
 			this.Controls.Add(this.BT_Path);
 			this.Controls.Add(this.BT_exception);
@@ -138,5 +163,7 @@
 		private System.Windows.Forms.Button BT_exception;
 		private System.Windows.Forms.Button BT_Path;
 		private System.Windows.Forms.Button BT_fileExists;
+		private System.Windows.Forms.Label LBL_secWrite;
+		private System.Windows.Forms.Label LBL_secRead;
 	}
 }
