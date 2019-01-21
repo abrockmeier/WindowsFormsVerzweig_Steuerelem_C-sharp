@@ -111,6 +111,12 @@ namespace WindowsFormsVerzweig_Steuerelem_C_sharp
 			}
 		}
 
+		public void clearOutputStrings()
+		{
+			Output = "";
+			Output2 = "";
+			Output3 = "";
+		}
 
 		public void OddOrEven()
 		{
