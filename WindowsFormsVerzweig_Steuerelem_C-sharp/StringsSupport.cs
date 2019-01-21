@@ -41,7 +41,6 @@ namespace WindowsFormsVerzweig_Steuerelem_C_sharp
 			set { output = value; }
 		}
 
-
 		public int Length
 		{
 			get { return length; }
@@ -131,6 +130,12 @@ namespace WindowsFormsVerzweig_Steuerelem_C_sharp
 				Even = 0;
 			}
 
+		}
+
+		public void Input_textChanged()
+		{
+			String_length();
+			Length = Input.Length;
 		}
 	}
 }

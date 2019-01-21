@@ -99,8 +99,13 @@ namespace WindowsFormsVerzweig_Steuerelem_C_sharp
 			search = TB_search.Text;
 			position = input.IndexOf(search);
 
-			output = "search string at char: " + position;
-			LBL_output.Text = output;
+			if (!(position == -1))
+			{
+				output = "search string at char: " + position;
+				LBL_output.Text = output;
+			}
+			else
+				LBL_output.Text = "unable to find search string!";
 		}
 
 		private void BT_searchAll_Click(object sender, EventArgs e)
@@ -142,7 +147,7 @@ namespace WindowsFormsVerzweig_Steuerelem_C_sharp
 			insert = TB_insert.Text;
 
 			output = input.Insert((int)NUD_atPos.Value, insert);
-			LBL_output.Text = output;
+			LBL_output.Text += "output from insertion:\n" + output + "\n";
 		}
 
 		private void TB_insert_TextChanged(object sender, EventArgs e)
@@ -160,7 +165,7 @@ namespace WindowsFormsVerzweig_Steuerelem_C_sharp
 			input = TB_input.Text;
 			output = input.Remove((int)NUD_fromPos.Value,
 				(int)NUD_delete.Value);
-				LBL_output.Text = output;
+				LBL_output.Text += "output from deletion:\n" + output + "\n";
 		}
 
 		private void BT_show_Click(object sender, EventArgs e)
@@ -171,22 +176,24 @@ namespace WindowsFormsVerzweig_Steuerelem_C_sharp
 			input = TB_input.Text;
 			output = input.Substring((int)NUD_subFromPos.Value,
 				(int) NUD_length.Value);
-			LBL_output.Text = output;
+			LBL_output.Text += "output from show substring:\n" + output + "\n";
 		}
 
 		private void TB_input_TextChanged(object sender, EventArgs e)
 		{
 			if ((NUD_delete.Value != 0) && (NUD_atPos.Value != 0))
 			{
-			string input = TB_input.Text;
-			NUD_delete.Maximum = input.Length;
-			NUD_fromPos.Maximum = input.Length -1;
+			stringSupport_inst.Input = TB_input.Text;
+			stringSupport_inst.Input_textChanged();
+			NUD_delete.Maximum = stringSupport_inst.Length;
+			NUD_fromPos.Maximum = stringSupport_inst.Length -1;
 			}
 			if ((NUD_subFromPos.Value != 0) && (NUD_length.Value != 0))
 			{
-			string input = TB_input.Text;
-			NUD_subFromPos.Maximum = input.Length -1;
-			NUD_length.Maximum = input.Length;
+			stringSupport_inst.Input_textChanged();
+			stringSupport_inst.Input = TB_input.Text;
+			NUD_length.Maximum = stringSupport_inst.Length;
+			NUD_subFromPos.Maximum = stringSupport_inst.Length -1;
 			}
 			if (((NUD_delete.Value == 0) && (NUD_atPos.Value == 0)) &&
 				((NUD_subFromPos.Value == 0) && (NUD_length.Value == 0)))
