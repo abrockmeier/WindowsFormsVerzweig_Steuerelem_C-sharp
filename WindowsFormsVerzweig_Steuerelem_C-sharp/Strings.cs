@@ -62,31 +62,19 @@ namespace WindowsFormsVerzweig_Steuerelem_C_sharp
 
 		private void BT_trim_Click(object sender, EventArgs e)
 		{
-			string input, trimmed, output;
 			clear_outputLBLs();
-
-			input = TB_input.Text;
-
-			trimmed = input.Trim(' ', ';', '#');
-
-			output = "trimmed: | " + trimmed + "|";
-			LBL_output.Text = output;
+			stringSupport_inst.Input = TB_input.Text;
+			stringSupport_inst.Trim_String();
+			LBL_output.Text = stringSupport_inst.Output;
 		}
 
 		private void BT_split_Click(object sender, EventArgs e)
 		{
-			string input = TB_input.Text;
-			string[] splitString;
 			clear_outputLBLs();
-
-			splitString = input.Split(';');
-
-			LBL_output.Text = "split result:" + "\n";
-
-			for (int i = 0; i < splitString.Length; i++)
-			{
-				LBL_output.Text += "part: " + i + ":" + splitString[i] + "\n";
-			}
+			stringSupport_inst.Input = TB_input.Text;
+			stringSupport_inst.Split_String();
+			// Outputter nutzbar?
+			LBL_output.Text = stringSupport_inst.Output;
 		}
 
 		private void BT_search1_Click(object sender, EventArgs e)

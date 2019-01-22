@@ -103,7 +103,7 @@
 			this.BT_split.Name = "BT_split";
 			this.BT_split.Size = new System.Drawing.Size(125, 31);
 			this.BT_split.TabIndex = 4;
-			this.BT_split.Text = "Split";
+			this.BT_split.Text = "Split @ \';\'";
 			this.BT_split.UseVisualStyleBackColor = true;
 			this.BT_split.Click += new System.EventHandler(this.BT_split_Click);
 			// 

@@ -15,7 +15,30 @@ namespace WindowsFormsVerzweig_Steuerelem_C_sharp
 		private int length;
 		private int even;
 		private int odd;
+		private string trimmed;
+		private string[] splitString;
+		//private string myVar;
 
+		public string Trimmed
+		{
+			get { return trimmed; }
+			set { trimmed = value; }
+		}
+
+		public string[] SplitString
+		{
+			get { return splitString; }
+			set { splitString = value; }
+		}
+
+		/*
+
+		public string MyProperty
+		{
+			get { return myVar; }
+			set { myVar = value; }
+		}
+		*/
 
 		public int Odd
 		{
@@ -63,6 +86,21 @@ namespace WindowsFormsVerzweig_Steuerelem_C_sharp
 			Output = Convert.ToString(Input.Length);
 		}
 
+		public void Split_String()
+		{
+			SplitString = Input.Split(';');
+			Output = "split result:" + "\n";
+			for (int i = 0; i < SplitString.Length; i++)
+			{
+				Output += "part " + i + ":" + splitString[i] + "\n";
+			}
+		}
+
+		public void Trim_String()
+		{
+			Trimmed = Input.Trim(' ', ';', '#');
+			Output = "trimmed: | " + Trimmed + "|";
+		}
 			
 		public void String_toChar()
 		{
