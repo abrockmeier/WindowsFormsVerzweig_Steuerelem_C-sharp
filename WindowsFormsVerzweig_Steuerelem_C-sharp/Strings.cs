@@ -50,7 +50,6 @@ namespace WindowsFormsVerzweig_Steuerelem_C_sharp
 			LBL_output2.Text = stringSupport_inst.Output2;
 			LBL_output3.Text = stringSupport_inst.Output3;
 			stringSupport_inst.clearOutputStrings();
-
 		}
 
 		private void clear_outputLBLs()
@@ -73,7 +72,6 @@ namespace WindowsFormsVerzweig_Steuerelem_C_sharp
 			clear_outputLBLs();
 			stringSupport_inst.Input = TB_input.Text;
 			stringSupport_inst.Split_String();
-			// Outputter nutzbar?
 			LBL_output.Text = stringSupport_inst.Output;
 		}
 

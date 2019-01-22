@@ -19,6 +19,15 @@ namespace WindowsFormsVerzweig_Steuerelem_C_sharp
 		private string[] splitString;
 		//private string myVar;
 
+		/*
+
+		public string MyProperty
+		{
+			get { return myVar; }
+			set { myVar = value; }
+		}
+		*/
+
 		public string Trimmed
 		{
 			get { return trimmed; }
@@ -30,15 +39,6 @@ namespace WindowsFormsVerzweig_Steuerelem_C_sharp
 			get { return splitString; }
 			set { splitString = value; }
 		}
-
-		/*
-
-		public string MyProperty
-		{
-			get { return myVar; }
-			set { myVar = value; }
-		}
-		*/
 
 		public int Odd
 		{
