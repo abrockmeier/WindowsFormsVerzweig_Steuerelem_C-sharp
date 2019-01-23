@@ -56,6 +56,9 @@
 			this.NUD_subFromPos = new System.Windows.Forms.NumericUpDown();
 			this.LBL_output2 = new System.Windows.Forms.Label();
 			this.LBL_output3 = new System.Windows.Forms.Label();
+			this.BT_formatNotifi = new System.Windows.Forms.Button();
+			this.LSTB_output = new System.Windows.Forms.ListBox();
+			this.LBL_outputS = new System.Windows.Forms.Label();
 			((System.ComponentModel.ISupportInitialize)(this.NUD_atPos)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.NUD_delete)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.NUD_fromPos)).BeginInit();
@@ -120,7 +123,7 @@
 			// 
 			// BT_searchAll
 			// 
-			this.BT_searchAll.Location = new System.Drawing.Point(918, 381);
+			this.BT_searchAll.Location = new System.Drawing.Point(918, 383);
 			this.BT_searchAll.Margin = new System.Windows.Forms.Padding(4);
 			this.BT_searchAll.Name = "BT_searchAll";
 			this.BT_searchAll.Size = new System.Drawing.Size(125, 31);
@@ -357,11 +360,45 @@
 			this.LBL_output3.Size = new System.Drawing.Size(0, 20);
 			this.LBL_output3.TabIndex = 52;
 			// 
+			// BT_formatNotifi
+			// 
+			this.BT_formatNotifi.Location = new System.Drawing.Point(918, 424);
+			this.BT_formatNotifi.Margin = new System.Windows.Forms.Padding(4);
+			this.BT_formatNotifi.Name = "BT_formatNotifi";
+			this.BT_formatNotifi.Size = new System.Drawing.Size(125, 62);
+			this.BT_formatNotifi.TabIndex = 53;
+			this.BT_formatNotifi.Text = "format notification";
+			this.BT_formatNotifi.UseVisualStyleBackColor = true;
+			this.BT_formatNotifi.Click += new System.EventHandler(this.BT_formatNotifi_Click);
+			// 
+			// LSTB_output
+			// 
+			this.LSTB_output.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.LSTB_output.FormattingEnabled = true;
+			this.LSTB_output.ItemHeight = 22;
+			this.LSTB_output.Location = new System.Drawing.Point(152, 529);
+			this.LSTB_output.Name = "LSTB_output";
+			this.LSTB_output.Size = new System.Drawing.Size(556, 136);
+			this.LSTB_output.TabIndex = 55;
+			// 
+			// LBL_outputS
+			// 
+			this.LBL_outputS.AutoSize = true;
+			this.LBL_outputS.Font = new System.Drawing.Font("Courier New", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.LBL_outputS.Location = new System.Drawing.Point(41, 142);
+			this.LBL_outputS.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+			this.LBL_outputS.Name = "LBL_outputS";
+			this.LBL_outputS.Size = new System.Drawing.Size(0, 21);
+			this.LBL_outputS.TabIndex = 56;
+			// 
 			// Strings
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(1132, 603);
+			this.ClientSize = new System.Drawing.Size(1132, 730);
+			this.Controls.Add(this.LBL_outputS);
+			this.Controls.Add(this.LSTB_output);
+			this.Controls.Add(this.BT_formatNotifi);
 			this.Controls.Add(this.LBL_output3);
 			this.Controls.Add(this.LBL_output2);
 			this.Controls.Add(this.BT_show);
@@ -435,5 +472,8 @@
 		private System.Windows.Forms.NumericUpDown NUD_subFromPos;
 		private System.Windows.Forms.Label LBL_output2;
 		private System.Windows.Forms.Label LBL_output3;
+		private System.Windows.Forms.Button BT_formatNotifi;
+		private System.Windows.Forms.ListBox LSTB_output;
+		private System.Windows.Forms.Label LBL_outputS;
 	}
 }
